@@ -57,7 +57,5 @@ function findWords(input, currentWord) {
 }
 
 function alphabetize(s) {
-    var a = [...s]
-    a.sort()
-    return a.join('')
+    return [...s].sort().join('')
 }
