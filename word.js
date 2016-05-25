@@ -1,10 +1,7 @@
 module.exports = (fs, word) => {
     var output = []
-
     var wordList = require('./read.js')(fs)
-
     var compare
-
     wordList.forEach(function (str) {
         if (str != '')
             compare = findWords(word, str)
@@ -18,15 +15,12 @@ module.exports = (fs, word) => {
             case 'contains':
                 output.push(str)
                 break;
-            default:
-                break;
         }
 
     }, this)
     return output
 
 };
-
 
 function findWords(input, currentWord) {
     var str1 = alphabetize(input.toLowerCase())
@@ -50,10 +44,7 @@ function findWords(input, currentWord) {
             }
         }, this);
     }
-
     return out
-
-
 }
 
 function alphabetize(s) {
